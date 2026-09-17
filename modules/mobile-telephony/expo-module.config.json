@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["MobileTelephonyModule"]
+  },
+  "android": {
+    "modules": ["com.mobiletelephony.MobileTelephonyModule"]
+  }
+}
