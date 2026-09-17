@@ -26,9 +26,8 @@ class MobileTelephonyModule : Module() {
             }
 
             val subscriptionManager =
-                context.getSystemService(
-                    SubscriptionManager::class.java
-                )
+                context.getSystemService(SubscriptionManager::class.java)
+                    ?: throw Exception("SubscriptionManager is not available")
 
             val activeSubscriptions =
                 subscriptionManager.activeSubscriptionInfoList
@@ -37,18 +36,16 @@ class MobileTelephonyModule : Module() {
                 SubscriptionManager.getDefaultDataSubscriptionId()
 
             activeSubscriptions?.map { subscription ->
-
-                mapOf(
+                mapOf<String, Any?>(
                     "subscriptionId" to subscription.subscriptionId,
                     "simSlotIndex" to subscription.simSlotIndex,
                     "carrierName" to subscription.carrierName?.toString(),
                     "countryIso" to subscription.countryIso,
                     "isDefaultDataSubscription" to (
-                        subscription.subscriptionId ==
-                            defaultDataSubscriptionId
-                        )
+                        subscription.subscriptionId == defaultDataSubscriptionId
+                    )
                 )
-            } ?: emptyList()
+            } ?: emptyList<Map<String, Any?>>()
         }
     }
 }
