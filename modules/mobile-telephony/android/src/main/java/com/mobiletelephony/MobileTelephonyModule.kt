@@ -4,7 +4,6 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.telephony.SubscriptionManager
 import androidx.core.content.ContextCompat
-import expo.modules.kotlin.Promise
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
