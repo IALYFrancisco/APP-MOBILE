@@ -26,7 +26,8 @@
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.0",
     "react-native-web": "~0.21.0",
-    "react-native-worklets": "0.10.1"
+    "react-native-worklets": "0.10.1",
+    "mobile-telephony": "file:./modules/mobile-telephony"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
