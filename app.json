@@ -11,6 +11,9 @@
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "permissions": [
+        "READ_PHONE_STATE"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
